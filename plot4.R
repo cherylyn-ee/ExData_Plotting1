@@ -1,0 +1,7 @@
+par(mfrow=c(2,2), mar=c(4,4,4,4))
+source("plot2.R")
+with(powercon,plot(Day,as.numeric(as.character(Voltage)),type="l", ylab = "Voltage"))
+source("plot3.R")
+with(powercon,plot(Day,as.numeric(as.character(Global_reactive_power)),type="l", ylab = "Global reactive Power"))
+dev.copy(png,file="plot4.png")
+dev.off()
